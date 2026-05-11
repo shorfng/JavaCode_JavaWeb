@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <!-- 父工程信息 -->
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.loto</groupId>
@@ -20,10 +19,14 @@
         <module>JavaWeb_8.5_Ajax</module>
     </modules>
 
-    <!-- 解决Language Level版本问题 -->
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
+        <!-- 解决字符集问题 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>         <!-- 源码字符集 -->
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> <!-- 输出字符集 -->
 
+        <!-- 解决 Language Level 版本问题 -->
+        <java.version>21</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
 </project>
